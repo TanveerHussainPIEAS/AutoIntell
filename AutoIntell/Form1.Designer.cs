@@ -30,6 +30,8 @@
         {
             button1 = new Button();
             pictureBox1 = new PictureBox();
+            labelWidth = new Label(); // Label for width
+            labelHeight = new Label(); // Label for height
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -62,11 +64,30 @@
             Text = "AutoIntell";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
+
+            labelWidth.AutoSize = true;
+            labelWidth.Location = new Point(12, 60);
+            labelWidth.Name = "labelWidth";
+            labelWidth.Size = new Size(100, 20);
+            labelWidth.TabIndex = 2;
+            labelWidth.Text = "Width: ";
+
+            // Add labelHeight
+            labelHeight.AutoSize = true;
+            labelHeight.Location = new Point(12, 90);
+            labelHeight.Name = "labelHeight";
+            labelHeight.Size = new Size(100, 20);
+            labelHeight.TabIndex = 3;
+            labelHeight.Text = "Height: ";
+            Controls.Add(labelWidth);
+            Controls.Add(labelHeight);
         }
 
         #endregion
 
         private Button button1;
         private PictureBox pictureBox1;
+        private Label labelWidth;
+        private Label labelHeight;
     }
 }

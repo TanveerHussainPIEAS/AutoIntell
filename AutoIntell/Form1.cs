@@ -1,6 +1,7 @@
 using OpenCvSharp;
 using OpenCvSharp.Extensions;
 using System;
+using System.Drawing;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -11,6 +12,7 @@ namespace AutoIntell
         private VideoCapture capture;
         private Mat frame;
         private Bitmap image;
+        private Bitmap capturedImage;
         private bool isCapturing = false;
 
         public Form1()
@@ -40,6 +42,16 @@ namespace AutoIntell
             {
                 isCapturing = false;
                 button1.Text = "Retake Image";
+
+                // Store the captured image
+                capturedImage = (Bitmap)image.Clone();
+                // Check the width and height of capturedImage
+                int width = capturedImage.Width;
+                int height = capturedImage.Height;
+
+                // Display width and height in labels
+                labelWidth.Text = $"Width: {width}";
+                labelHeight.Text = $"Height: {height}";
             }
         }
 
@@ -60,8 +72,6 @@ namespace AutoIntell
                 }
             }
         }
-
-
 
         private void Form1_Load(object sender, EventArgs e)
         {
