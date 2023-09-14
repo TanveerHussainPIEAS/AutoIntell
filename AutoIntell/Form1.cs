@@ -95,6 +95,9 @@ namespace AutoIntell
                     // Load the selected image
                     capturedImage = new Bitmap(openFileDialog.FileName);
 
+                    // Set PictureBoxSizeMode to Zoom
+                    pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+
                     // Display the image in the PictureBox
                     pictureBox1.Image = capturedImage;
 
@@ -108,6 +111,7 @@ namespace AutoIntell
                 }
             }
         }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
