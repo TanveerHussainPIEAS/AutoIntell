@@ -45,13 +45,23 @@ namespace AutoIntell
 
                 // Store the captured image
                 capturedImage = (Bitmap)image.Clone();
-                // Check the width and height of capturedImage
-                int width = capturedImage.Width;
-                int height = capturedImage.Height;
 
-                // Display width and height in labels
-                labelWidth.Text = $"Width: {width}";
-                labelHeight.Text = $"Height: {height}";
+                if (capturedImage != null)
+                {
+                    // Check the width and height of capturedImage
+                    int width = capturedImage.Width;
+                    int height = capturedImage.Height;
+
+                    // Display width and height in labels
+                    labelWidth.Text = $"Width: {width}";
+                    labelHeight.Text = $"Height: {height}";
+                }
+                else
+                {
+                    // If the captured image is null, hide the labels
+                    labelWidth.Text = "";
+                    labelHeight.Text = " ";
+                }
             }
         }
 

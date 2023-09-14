@@ -30,8 +30,8 @@
         {
             button1 = new Button();
             pictureBox1 = new PictureBox();
-            labelWidth = new Label(); // Label for width
-            labelHeight = new Label(); // Label for height
+            labelWidth = new Label();
+            labelHeight = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -47,40 +47,42 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(426, 196);
+            pictureBox1.Location = new Point(239, 90);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1307, 521);
+            pictureBox1.Size = new Size(821, 476);
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
+            // 
+            // labelWidth
+            // 
+            labelWidth.AutoSize = true;
+            labelWidth.Location = new Point(12, 60);
+            labelWidth.Name = "labelWidth";
+            labelWidth.Size = new Size(0, 20);
+            labelWidth.TabIndex = 2;
+            // 
+            // labelHeight
+            // 
+            labelHeight.AutoSize = true;
+            labelHeight.Location = new Point(12, 90);
+            labelHeight.Name = "labelHeight";
+            labelHeight.Size = new Size(0, 20);
+            labelHeight.TabIndex = 3;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1765, 744);
+            ClientSize = new Size(1195, 613);
             Controls.Add(pictureBox1);
             Controls.Add(button1);
+            Controls.Add(labelWidth);
+            Controls.Add(labelHeight);
             Name = "Form1";
             Text = "AutoIntell";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
-
-            labelWidth.AutoSize = true;
-            labelWidth.Location = new Point(12, 60);
-            labelWidth.Name = "labelWidth";
-            labelWidth.Size = new Size(100, 20);
-            labelWidth.TabIndex = 2;
-            labelWidth.Text = "Width: ";
-
-            // Add labelHeight
-            labelHeight.AutoSize = true;
-            labelHeight.Location = new Point(12, 90);
-            labelHeight.Name = "labelHeight";
-            labelHeight.Size = new Size(100, 20);
-            labelHeight.TabIndex = 3;
-            labelHeight.Text = "Height: ";
-            Controls.Add(labelWidth);
-            Controls.Add(labelHeight);
+            PerformLayout();
         }
 
         #endregion
