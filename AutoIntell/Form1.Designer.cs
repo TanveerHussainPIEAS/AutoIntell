@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             button1 = new Button();
+            importButton = new Button();
             pictureBox1 = new PictureBox();
             labelWidth = new Label();
             labelHeight = new Label();
@@ -45,6 +46,16 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // importButton
+            // 
+            importButton.Location = new Point(12, 50);
+            importButton.Name = "importButton";
+            importButton.Size = new Size(146, 31);
+            importButton.TabIndex = 4;
+            importButton.Text = "Import Image";
+            importButton.UseVisualStyleBackColor = true;
+            importButton.Click += importButton_Click;
+            // 
             // pictureBox1
             // 
             pictureBox1.Location = new Point(239, 90);
@@ -56,7 +67,7 @@
             // labelWidth
             // 
             labelWidth.AutoSize = true;
-            labelWidth.Location = new Point(12, 60);
+            labelWidth.Location = new Point(12, 100);
             labelWidth.Name = "labelWidth";
             labelWidth.Size = new Size(0, 20);
             labelWidth.TabIndex = 2;
@@ -64,7 +75,7 @@
             // labelHeight
             // 
             labelHeight.AutoSize = true;
-            labelHeight.Location = new Point(12, 90);
+            labelHeight.Location = new Point(12, 118);
             labelHeight.Name = "labelHeight";
             labelHeight.Size = new Size(0, 20);
             labelHeight.TabIndex = 3;
@@ -78,6 +89,7 @@
             Controls.Add(button1);
             Controls.Add(labelWidth);
             Controls.Add(labelHeight);
+            Controls.Add(importButton);
             Name = "Form1";
             Text = "AutoIntell";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -88,6 +100,7 @@
         #endregion
 
         private Button button1;
+        private Button importButton;
         private PictureBox pictureBox1;
         private Label labelWidth;
         private Label labelHeight;

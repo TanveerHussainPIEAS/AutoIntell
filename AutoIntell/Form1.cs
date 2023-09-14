@@ -83,6 +83,32 @@ namespace AutoIntell
             }
         }
 
+
+        private void importButton_Click(object sender, EventArgs e)
+        {
+            // Open a file dialog to select an image
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    // Load the selected image
+                    capturedImage = new Bitmap(openFileDialog.FileName);
+
+                    // Display the image in the PictureBox
+                    pictureBox1.Image = capturedImage;
+
+                    // Check the width and height of the imported image
+                    int width = capturedImage.Width;
+                    int height = capturedImage.Height;
+
+                    // Display width and height in labels
+                    labelWidth.Text = $"Width: {width}";
+                    labelHeight.Text = $"Height: {height}";
+                }
+            }
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             // Do not start capturing when the form loads
